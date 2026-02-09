@@ -1488,3 +1488,80 @@
         damage:
           types:
             Slash: 3.5
+
+- type: reagent
+  id: Omnitel
+  name: reagent-name-Omnitel
+  group: Medicine
+  desc: reagent-desc-omnitel
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: medicine
+  color: "#f80000"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:ModifyBleedAmount
+        amount: -1.9
+      - !type:SuppressPain
+        amount: 1
+        time: 30
+      - !type:AdjustPainFeels
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        amount: 0.04
+      - !type:HealthChange
+        damage:
+          groups:
+            Shock:: -18
+            Cold: -18
+            Burn: -18
+            Piercing: -18
+            Slash: -18
+            Brute: -18
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Yowie
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 15
+        damage:
+          types:
+            Asphyxiation: 9
+            Poison: 9
+            Radiation: 9
+      - !type:ChemVomit
+        conditions:
+        - !type:OrganType
+          type: Yowie
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 30
+        probability: 0.02
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+      - !type:Drunk
+      - !type:AdjustConsciousness
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        allowNewModifiers: true
+        modifierType: Pain
+        identifier: Suffocation
+        amount: -2
+        time: 12
+
+- type: reaction
+  id: Omnitel
+  reactants:
+    Dexalin:
+      amount: 5
+    Phalanximine:
+      amount: 5
+    TranexamicAcid:
+      amount: 5
+  products:
+    Omnitel: 15
