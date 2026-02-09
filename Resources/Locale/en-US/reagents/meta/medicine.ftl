@@ -153,3 +153,6 @@ reagent-desc-artiplates = A highly advanced form of artificial blood that expand
 
 reagent-name-enunciase = enunciase
 reagent-desc-enunciase = An enzyme that helps stimulate the language centers of the brain, relieving stuttering due to other drugs and temporarily forcing 'perfect' speech. Causes nausea in high doses.
+
+reagent-name-omnitel = omnitel
+reagent-desc-omntiel = A potent crimson medical reagent that rapidly stabilizes severe injuries by suppressing pain, reducing bleeding, and accelerating recovery from blunt and physical trauma. In higher concentrations, it places heavy strain on the body, potentially causing intoxication, tremors, nausea, and oxygen deprivation, making careful dosing essential.
